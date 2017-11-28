@@ -1,0 +1,142 @@
+
+
+
+body{
+	font-family: '微软雅黑'; font-size: 12px;
+}
+
+li{list-style: none;}
+
+div:after,ul:after{
+	content: '';height: 0; clear: both;
+}
+.fl{float: left;}
+.fr{float: right;}
+.red{color: #c90000}
+
+.hide{display: none;}
+.clearfix{clear: both; zoom: 0}
+@box_shadow:2px 2px 5px #eaeffd inset;
+@border:1px solid #cad4e2;
+
+
+
+//三角
+.triangle (top,@w:5px,@color:#ccc){
+    border-style:solid dashed dashed dashed;
+    border-color:@color transparent transparent transparent;
+    border-width:@w;
+  }
+  .triangle (right,@w:5px,@color:#ccc){
+    border-style:dashed solid dashed dashed;
+    border-color:transparent @color transparent transparent;
+    border-width:@w;
+  }
+  .triangle (bottom,@w:5px,@color:#ccc){
+    border-style:dashed dashed solid dashed;
+    border-color:transparent transparent @color transparent;
+    border-width:@w;
+  }
+  .triangle (left,@w:5px,@color:#ccc){
+    border-style:dashed dashed dashed solid;
+    border-color:transparent transparent transparent @color;
+    border-width:@w;
+  }
+// 一些公共方法
+.bgCol(@col){
+    background-color: @col;
+}
+.lh(@height){
+   line-height: @height;
+   height: @height;
+}
+.tc(){
+	text-align: center;
+}
+.tr(){
+    text-align: right;
+}
+.tl(){
+    text-align: left;
+}
+.tind(@bj){
+    text-indent: @bj;
+}
+.cur(){
+	cursor: pointer;
+}
+.ft(@size){
+   font-size: @size;
+}
+.wh(@width,@heigth){
+	width: @width; height: @heigth;
+}
+.border(@col:#e6e6e6){
+   border:1px solid @col;
+}
+.bor_b(@col:#ccc){
+	border-bottom:1px solid @col;
+}
+.pt(@bj){
+	padding-top: @bj;
+}
+.pb(@bj){
+	padding-bottom: @bj;
+}
+.pl(@bj){
+	padding-left: @bj;
+}
+.pr(@bj){
+	padding-right: @bj;
+}
+.mt(@bj){
+    margin-top: @bj;
+}
+.mb(@bj){
+    margin-bottom: @bj;
+}
+.ml(@bj){
+    margin-left: @bj;
+}
+.mr(@bj){
+    margin-right: @bj;
+}
+.pos_r(){
+	position: relative;
+}
+.pos_a(){
+	position: absolute;
+}
+.buttonStyle(@width, @height, @bor_radius, @bg, @col){ 
+	 border: none; outline: none; width: @width; height: @height; border-radius: @bor_radius;background: @bg; color: @col; cursor: pointer;
+}
+//定位居中
+.pos-box(@w:600px,@h:360px,@pos:absolute){
+  width: @w;
+  height: @h;
+  position: @pos;
+  left: 50%;
+  top: 50%;
+  margin-left: -@w / 2;
+  margin-top: -@h / 2;
+}
+.overhide(){
+    overflow: hidden;text-overflow: ellipsis; white-space: nowrap;  
+}
+.boxsize(){
+    box-sizing:border-box;-webkit-box-sizing:border-box;
+}
+
+
+
+// 公共变量
+@orange:#ff9027;
+@blue:#09438d;
+@btnblue:#377bee;
+@pink:#cc1d06;
+
+
+//清除ie的默认选择框样式清除，隐藏下拉箭头
+
+//清除ie的默认选择框样式清除，隐藏下拉箭头
+.select-default select::-ms-expand { display: none; }
